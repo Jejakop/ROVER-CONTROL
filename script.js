@@ -1,4 +1,4 @@
-const esp32IP = "http://192.168.1.123"; // <- wpisz IP Twojego ESP32
+const esp32IP = "http://192.168.0.73"; // <- wpisz IP Twojego ESP32
 
 function sendCommand(cmd) {
   fetch(`${esp32IP}/${cmd}`)
@@ -12,3 +12,4 @@ function setSpeed(val) {
   fetch(`${esp32IP}/speed?val=${val}`)
     .catch(err => alert("Błąd połączenia z ESP32"));
 }
+
