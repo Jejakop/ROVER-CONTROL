@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sterowanie silnikiem ESP32</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Sterowanie silnikiem DC</h1>
+  <button onclick="sendCommand('forward')">Do przodu</button>
+  <button onclick="sendCommand('backward')">Do tyłu</button>
+  <button onclick="sendCommand('stop')">Stop</button>
+  
+  <h3>Ustaw prędkość (PWM 0-255):</h3>
+  <input type="range" id="speedRange" min="0" max="255" value="200" oninput="setSpeed(this.value)" />
+  <span id="speedValue">200</span>
+
+  <script src="script.js"></script>
+</body>
+</html>
